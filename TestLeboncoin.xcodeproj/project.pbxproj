@@ -14,6 +14,14 @@
 		65CAE90D28DB462C0088C2F3 /* ClassifiedADSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE90C28DB462C0088C2F3 /* ClassifiedADSViewController.swift */; };
 		65CAE91628DB48630088C2F3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE91528DB48630088C2F3 /* TabBarController.swift */; };
 		65CAE91828DB48BF0088C2F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE91728DB48BF0088C2F3 /* Constants.swift */; };
+		65CAE91A28DB78480088C2F3 /* LBCCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE91928DB78480088C2F3 /* LBCCategory.swift */; };
+		65CAE91C28DB78800088C2F3 /* LBCClassifiedAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE91B28DB78800088C2F3 /* LBCClassifiedAD.swift */; };
+		65CAE91E28DB790E0088C2F3 /* ImagesUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE91D28DB790E0088C2F3 /* ImagesUrl.swift */; };
+		65CAE92228DB79710088C2F3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92128DB79710088C2F3 /* APIService.swift */; };
+		65CAE92428DB79B30088C2F3 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92328DB79B30088C2F3 /* URLSessionProtocol.swift */; };
+		65CAE92628DB79E50088C2F3 /* LBCAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92528DB79E50088C2F3 /* LBCAPIService.swift */; };
+		65CAE92828DB7AC00088C2F3 /* LBCURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92728DB7AC00088C2F3 /* LBCURLSession.swift */; };
+		65CAE92A28DB7BC40088C2F3 /* ClassifiedADSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92928DB7BC40088C2F3 /* ClassifiedADSViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		65CAE90C28DB462C0088C2F3 /* ClassifiedADSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedADSViewController.swift; sourceTree = "<group>"; };
 		65CAE91528DB48630088C2F3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		65CAE91728DB48BF0088C2F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		65CAE91928DB78480088C2F3 /* LBCCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCCategory.swift; sourceTree = "<group>"; };
+		65CAE91B28DB78800088C2F3 /* LBCClassifiedAD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCClassifiedAD.swift; sourceTree = "<group>"; };
+		65CAE91D28DB790E0088C2F3 /* ImagesUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesUrl.swift; sourceTree = "<group>"; };
+		65CAE92128DB79710088C2F3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		65CAE92328DB79B30088C2F3 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		65CAE92528DB79E50088C2F3 /* LBCAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCAPIService.swift; sourceTree = "<group>"; };
+		65CAE92728DB7AC00088C2F3 /* LBCURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCURLSession.swift; sourceTree = "<group>"; };
+		65CAE92928DB7BC40088C2F3 /* ClassifiedADSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedADSViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +108,10 @@
 		65CAE91028DB476B0088C2F3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				65CAE92328DB79B30088C2F3 /* URLSessionProtocol.swift */,
+				65CAE92728DB7AC00088C2F3 /* LBCURLSession.swift */,
+				65CAE92128DB79710088C2F3 /* APIService.swift */,
+				65CAE92528DB79E50088C2F3 /* LBCAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -108,6 +128,7 @@
 		65CAE91228DB47A60088C2F3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				65CAE92928DB7BC40088C2F3 /* ClassifiedADSViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -122,6 +143,9 @@
 		65CAE91428DB47D10088C2F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				65CAE91928DB78480088C2F3 /* LBCCategory.swift */,
+				65CAE91B28DB78800088C2F3 /* LBCClassifiedAD.swift */,
+				65CAE91D28DB790E0088C2F3 /* ImagesUrl.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,10 +220,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CAE92428DB79B30088C2F3 /* URLSessionProtocol.swift in Sources */,
+				65CAE92628DB79E50088C2F3 /* LBCAPIService.swift in Sources */,
 				65CAE91828DB48BF0088C2F3 /* Constants.swift in Sources */,
 				65CAE90D28DB462C0088C2F3 /* ClassifiedADSViewController.swift in Sources */,
 				65CAE91628DB48630088C2F3 /* TabBarController.swift in Sources */,
+				65CAE91E28DB790E0088C2F3 /* ImagesUrl.swift in Sources */,
+				65CAE91A28DB78480088C2F3 /* LBCCategory.swift in Sources */,
 				65CAE8F928DB1FB10088C2F3 /* AppDelegate.swift in Sources */,
+				65CAE92A28DB7BC40088C2F3 /* ClassifiedADSViewModel.swift in Sources */,
+				65CAE91C28DB78800088C2F3 /* LBCClassifiedAD.swift in Sources */,
+				65CAE92228DB79710088C2F3 /* APIService.swift in Sources */,
+				65CAE92828DB7AC00088C2F3 /* LBCURLSession.swift in Sources */,
 				65CAE8FB28DB1FB10088C2F3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

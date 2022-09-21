@@ -9,6 +9,8 @@ import UIKit
 
 class ClassifiedADSViewController: UIViewController {
 
+    let classifiedVM = ClassifiedADSViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,5 +18,8 @@ class ClassifiedADSViewController: UIViewController {
         
         navigationItem.title = "Leboncoin"
         
+        
     }
+    
+    
 }

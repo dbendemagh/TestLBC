@@ -14,9 +14,24 @@ enum Constants {
 }
 
 enum SFSymbols {
-    
     static let magnifyingGlass = UIImage(systemName: "magnifyingglass")
-    static let alerts = UIImage(systemName: "calendar.badge.exclamationmark")
 }
 
+enum LBCURL {
+    static let basePath = "https://raw.githubusercontent.com/leboncoin/paperclip/master/"
+    static let categories = "categories.json"
+    static let classifiedADS = "listing.json"
+}
 
+enum JsonFile {
+    static let categories = "Categories"
+    static let classifiedADs = "Listing"
+}
+
+enum LBCError: String, Error {
+    case invalidURL = "URL invalide"
+    case httpError = "Une erreur est survenue. Veuillez vérifier votre connexion Internet."
+    case networkError = "Invalid response from the server. Please try again."
+    case noData = "Pas de données"
+    case invalidData = "Les données reçues ne sont pas valides. Veuillez réessayer."
+}
