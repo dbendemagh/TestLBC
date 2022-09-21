@@ -22,7 +22,24 @@
 		65CAE92628DB79E50088C2F3 /* LBCAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92528DB79E50088C2F3 /* LBCAPIService.swift */; };
 		65CAE92828DB7AC00088C2F3 /* LBCURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92728DB7AC00088C2F3 /* LBCURLSession.swift */; };
 		65CAE92A28DB7BC40088C2F3 /* ClassifiedADSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92928DB7BC40088C2F3 /* ClassifiedADSViewModel.swift */; };
+		65CAE93F28DB81750088C2F3 /* TestLeboncoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE93E28DB81750088C2F3 /* TestLeboncoinTests.swift */; };
+		65CAE94728DB823C0088C2F3 /* FakeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE94628DB823C0088C2F3 /* FakeNetworkResponse.swift */; };
+		65CAE94928DB825E0088C2F3 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE94828DB825E0088C2F3 /* FakeData.swift */; };
+		65CAE94B28DB829B0088C2F3 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE94A28DB829B0088C2F3 /* URLSessionFake.swift */; };
+		65CAE94D28DB82F40088C2F3 /* ClassifiedADS.json in Resources */ = {isa = PBXBuildFile; fileRef = 65CAE94C28DB82F40088C2F3 /* ClassifiedADS.json */; };
+		65CAE94F28DB83250088C2F3 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 65CAE94E28DB83250088C2F3 /* Categories.json */; };
+		65CAE95128DB838B0088C2F3 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE95028DB838B0088C2F3 /* APIServiceTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65CAE94028DB81750088C2F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65CAE8ED28DB1FB10088C2F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65CAE8F428DB1FB10088C2F3;
+			remoteInfo = TestLeboncoin;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		65CAE8F528DB1FB10088C2F3 /* TestLeboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLeboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +59,25 @@
 		65CAE92528DB79E50088C2F3 /* LBCAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCAPIService.swift; sourceTree = "<group>"; };
 		65CAE92728DB7AC00088C2F3 /* LBCURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCURLSession.swift; sourceTree = "<group>"; };
 		65CAE92928DB7BC40088C2F3 /* ClassifiedADSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedADSViewModel.swift; sourceTree = "<group>"; };
+		65CAE93C28DB81750088C2F3 /* TestLeboncoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestLeboncoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65CAE93E28DB81750088C2F3 /* TestLeboncoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLeboncoinTests.swift; sourceTree = "<group>"; };
+		65CAE94628DB823C0088C2F3 /* FakeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkResponse.swift; sourceTree = "<group>"; };
+		65CAE94828DB825E0088C2F3 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
+		65CAE94A28DB829B0088C2F3 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
+		65CAE94C28DB82F40088C2F3 /* ClassifiedADS.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ClassifiedADS.json; sourceTree = "<group>"; };
+		65CAE94E28DB83250088C2F3 /* Categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
+		65CAE95028DB838B0088C2F3 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		65CAE8F228DB1FB10088C2F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65CAE93928DB81750088C2F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				65CAE8F728DB1FB10088C2F3 /* TestLeboncoin */,
+				65CAE93D28DB81750088C2F3 /* TestLeboncoinTests */,
 				65CAE8F628DB1FB10088C2F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				65CAE8F528DB1FB10088C2F3 /* TestLeboncoin.app */,
+				65CAE93C28DB81750088C2F3 /* TestLeboncoinTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +184,28 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		65CAE93D28DB81750088C2F3 /* TestLeboncoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				65CAE94528DB82130088C2F3 /* Helpers */,
+				65CAE93E28DB81750088C2F3 /* TestLeboncoinTests.swift */,
+				65CAE95028DB838B0088C2F3 /* APIServiceTests.swift */,
+			);
+			path = TestLeboncoinTests;
+			sourceTree = "<group>";
+		};
+		65CAE94528DB82130088C2F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				65CAE94628DB823C0088C2F3 /* FakeNetworkResponse.swift */,
+				65CAE94828DB825E0088C2F3 /* FakeData.swift */,
+				65CAE94A28DB829B0088C2F3 /* URLSessionFake.swift */,
+				65CAE94C28DB82F40088C2F3 /* ClassifiedADS.json */,
+				65CAE94E28DB83250088C2F3 /* Categories.json */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +226,24 @@
 			productReference = 65CAE8F528DB1FB10088C2F3 /* TestLeboncoin.app */;
 			productType = "com.apple.product-type.application";
 		};
+		65CAE93B28DB81750088C2F3 /* TestLeboncoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65CAE94228DB81750088C2F3 /* Build configuration list for PBXNativeTarget "TestLeboncoinTests" */;
+			buildPhases = (
+				65CAE93828DB81750088C2F3 /* Sources */,
+				65CAE93928DB81750088C2F3 /* Frameworks */,
+				65CAE93A28DB81750088C2F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65CAE94128DB81750088C2F3 /* PBXTargetDependency */,
+			);
+			name = TestLeboncoinTests;
+			productName = TestLeboncoinTests;
+			productReference = 65CAE93C28DB81750088C2F3 /* TestLeboncoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,6 +256,10 @@
 				TargetAttributes = {
 					65CAE8F428DB1FB10088C2F3 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					65CAE93B28DB81750088C2F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 65CAE8F428DB1FB10088C2F3;
 					};
 				};
 			};
@@ -199,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				65CAE8F428DB1FB10088C2F3 /* TestLeboncoin */,
+				65CAE93B28DB81750088C2F3 /* TestLeboncoinTests */,
 			);
 		};
 /* End PBXProject section */
@@ -210,6 +289,15 @@
 			files = (
 				65CAE90528DB1FB30088C2F3 /* LaunchScreen.storyboard in Resources */,
 				65CAE90228DB1FB30088C2F3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65CAE93A28DB81750088C2F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65CAE94D28DB82F40088C2F3 /* ClassifiedADS.json in Resources */,
+				65CAE94F28DB83250088C2F3 /* Categories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +324,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65CAE93828DB81750088C2F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65CAE94928DB825E0088C2F3 /* FakeData.swift in Sources */,
+				65CAE94B28DB829B0088C2F3 /* URLSessionFake.swift in Sources */,
+				65CAE94728DB823C0088C2F3 /* FakeNetworkResponse.swift in Sources */,
+				65CAE93F28DB81750088C2F3 /* TestLeboncoinTests.swift in Sources */,
+				65CAE95128DB838B0088C2F3 /* APIServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65CAE94128DB81750088C2F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65CAE8F428DB1FB10088C2F3 /* TestLeboncoin */;
+			targetProxy = 65CAE94028DB81750088C2F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		65CAE90328DB1FB30088C2F3 /* LaunchScreen.storyboard */ = {
@@ -300,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -354,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -422,6 +530,42 @@
 			};
 			name = Release;
 		};
+		65CAE94328DB81750088C2F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9T29Y222Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.danielbendemagh.TestLeboncoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestLeboncoin.app/TestLeboncoin";
+			};
+			name = Debug;
+		};
+		65CAE94428DB81750088C2F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9T29Y222Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.danielbendemagh.TestLeboncoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestLeboncoin.app/TestLeboncoin";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -439,6 +583,15 @@
 			buildConfigurations = (
 				65CAE90A28DB1FB30088C2F3 /* Debug */,
 				65CAE90B28DB1FB30088C2F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65CAE94228DB81750088C2F3 /* Build configuration list for PBXNativeTarget "TestLeboncoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65CAE94328DB81750088C2F3 /* Debug */,
+				65CAE94428DB81750088C2F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
