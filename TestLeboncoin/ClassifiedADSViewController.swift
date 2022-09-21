@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ClassifiedADSViewController.swift
 //  TestLeboncoin
 //
 //  Created by Daniel BENDEMAGH on 21/09/2022.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ClassifiedADSViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        view.backgroundColor = .systemBlue
     }
 
-
 }
-
