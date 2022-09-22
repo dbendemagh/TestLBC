@@ -29,6 +29,10 @@
 		65CAE94D28DB82F40088C2F3 /* ClassifiedADS.json in Resources */ = {isa = PBXBuildFile; fileRef = 65CAE94C28DB82F40088C2F3 /* ClassifiedADS.json */; };
 		65CAE94F28DB83250088C2F3 /* Categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 65CAE94E28DB83250088C2F3 /* Categories.json */; };
 		65CAE95128DB838B0088C2F3 /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE95028DB838B0088C2F3 /* APIServiceTests.swift */; };
+		65CAE95328DB9E150088C2F3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE95228DB9E150088C2F3 /* UIView.swift */; };
+		65CAE95528DB9ED00088C2F3 /* ClassifiedADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE95428DB9ED00088C2F3 /* ClassifiedADCell.swift */; };
+		65CAE95F28DCA3B10088C2F3 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE95E28DCA3B10088C2F3 /* SectionHeaderView.swift */; };
+		65CAE96128DCA4020088C2F3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE96028DCA4020088C2F3 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		65CAE94C28DB82F40088C2F3 /* ClassifiedADS.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ClassifiedADS.json; sourceTree = "<group>"; };
 		65CAE94E28DB83250088C2F3 /* Categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Categories.json; sourceTree = "<group>"; };
 		65CAE95028DB838B0088C2F3 /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		65CAE95228DB9E150088C2F3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		65CAE95428DB9ED00088C2F3 /* ClassifiedADCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedADCell.swift; sourceTree = "<group>"; };
+		65CAE95E28DCA3B10088C2F3 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		65CAE96028DCA4020088C2F3 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,7 @@
 		65CAE90F28DB47610088C2F3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				65CAE95228DB9E150088C2F3 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +179,9 @@
 		65CAE91328DB47C60088C2F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				65CAE95E28DCA3B10088C2F3 /* SectionHeaderView.swift */,
+				65CAE95428DB9ED00088C2F3 /* ClassifiedADCell.swift */,
+				65CAE96028DCA4020088C2F3 /* CategoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65CAE96128DCA4020088C2F3 /* CategoryCell.swift in Sources */,
 				65CAE92428DB79B30088C2F3 /* URLSessionProtocol.swift in Sources */,
 				65CAE92628DB79E50088C2F3 /* LBCAPIService.swift in Sources */,
 				65CAE91828DB48BF0088C2F3 /* Constants.swift in Sources */,
@@ -318,9 +331,12 @@
 				65CAE8F928DB1FB10088C2F3 /* AppDelegate.swift in Sources */,
 				65CAE92A28DB7BC40088C2F3 /* ClassifiedADSViewModel.swift in Sources */,
 				65CAE91C28DB78800088C2F3 /* LBCClassifiedAD.swift in Sources */,
+				65CAE95328DB9E150088C2F3 /* UIView.swift in Sources */,
 				65CAE92228DB79710088C2F3 /* APIService.swift in Sources */,
 				65CAE92828DB7AC00088C2F3 /* LBCURLSession.swift in Sources */,
+				65CAE95528DB9ED00088C2F3 /* ClassifiedADCell.swift in Sources */,
 				65CAE8FB28DB1FB10088C2F3 /* SceneDelegate.swift in Sources */,
+				65CAE95F28DCA3B10088C2F3 /* SectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

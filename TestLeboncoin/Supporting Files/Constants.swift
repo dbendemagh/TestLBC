@@ -30,8 +30,13 @@ enum JsonFile {
 
 enum LBCError: String, Error {
     case invalidURL = "URL invalide"
-    case httpError = "Une erreur est survenue. Veuillez vérifier votre connexion Internet."
-    case networkError = "Invalid response from the server. Please try again."
-    case noData = "Pas de données"
+    case httpError = "Les données n'ont pas pu être chargées. Veuillez réessayer."
+    case networkError = "Une erreur est survenue. Veuillez vérifier votre connexion Internet."
+    case noData = "Pas de données. Veuillez réessayer"
     case invalidData = "Les données reçues ne sont pas valides. Veuillez réessayer."
+}
+
+enum Section {
+    case categories
+    case classifiedADS
 }
