@@ -94,7 +94,7 @@ extension ClassifiedADSViewController {
                 item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                       heightDimension: .fractionalHeight(0.5))
+                                                       heightDimension: .fractionalHeight(0.6))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 
                 let section = NSCollectionLayoutSection(group: group)
@@ -122,11 +122,17 @@ extension ClassifiedADSViewController {
                 }
                 cell.configure(name: category.name)
                 return cell
-            } else if let classifedAD = itemIdentifier as? ClassifiedAD {
+            } else if let classifiedAD = itemIdentifier as? ClassifiedAD {
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ClassifiedADCell.identifier, for: indexPath) as? ClassifiedADCell else {
                     return nil
                 }
-                cell.configure(classifiedAD: classifedAD)
+                
+                cell.categoryName = self.classifiedADSViewModel.findCategory(id: classifiedAD.categoryId)
+                cell.configure(classifiedAD: classifiedAD)
+                
+                if let urlString = classifiedAD.imagesUrl.thumb {
+                    self.classifiedADSViewModel.fetchImage(urlString: urlString, cell: cell)
+                }
                 return cell
             }
             

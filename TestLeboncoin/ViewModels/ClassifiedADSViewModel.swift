@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 class ClassifiedADSViewModel {
     var categories = CurrentValueSubject<[LBCCategory], Never>([])
@@ -29,5 +30,25 @@ class ClassifiedADSViewModel {
         lbcApiService.getClassifiedADS { classifiedADS in
             self.classifiedADS.value = classifiedADS
         }
+    }
+    
+    func fetchImage(urlString: String, cell: ClassifiedADCell) {
+        lbcApiService.apiService.getImage (urlString: urlString) { result in
+            switch result {
+            case .success(let image):
+                cell.setImage(result: .success(image))
+            case .failure:
+                break
+            }
+     
+        }
+    }
+    
+    func findCategory(id: Int) -> String {
+        if let category = categories.value.first(where: { $0.id == id } ) {
+            return category.name
+        }
+        
+        return ""
     }
 }

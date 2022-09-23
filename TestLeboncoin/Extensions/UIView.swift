@@ -33,6 +33,8 @@ extension UIView {
     }
     
     func setConstraintSize(size: CGSize) {
+        translatesAutoresizingMaskIntoConstraints = false
+        
         if size.width > 0 {
             widthAnchor.constraint(equalToConstant: size.width).isActive = true
         }
@@ -43,22 +45,15 @@ extension UIView {
     }
     
     func setConstraintCenter(x: NSLayoutXAxisAnchor?, y: NSLayoutYAxisAnchor?) {
+        translatesAutoresizingMaskIntoConstraints = false
+        
         if let x = x {
             centerXAnchor.constraint(equalTo: x).isActive = true
         }
         
         if let y = y {
             centerYAnchor.constraint(equalTo: y).isActive = true
-            
         }
-    }
-    
-    func setConstraintHeight(dimension: NSLayoutDimension) {
-        heightAnchor.constraint(equalTo: dimension).isActive = true
-    }
-    
-    func setConstraintCenterY(view: UIView) {
-        centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }
 

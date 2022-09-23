@@ -33,6 +33,7 @@
 		65CAE95528DB9ED00088C2F3 /* ClassifiedADCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE95428DB9ED00088C2F3 /* ClassifiedADCell.swift */; };
 		65CAE95F28DCA3B10088C2F3 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE95E28DCA3B10088C2F3 /* SectionHeaderView.swift */; };
 		65CAE96128DCA4020088C2F3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE96028DCA4020088C2F3 /* CategoryCell.swift */; };
+		65CAE96328DDFFF40088C2F3 /* UrgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE96228DDFFF40088C2F3 /* UrgentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		65CAE95428DB9ED00088C2F3 /* ClassifiedADCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedADCell.swift; sourceTree = "<group>"; };
 		65CAE95E28DCA3B10088C2F3 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 		65CAE96028DCA4020088C2F3 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		65CAE96228DDFFF40088C2F3 /* UrgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrgentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				65CAE95E28DCA3B10088C2F3 /* SectionHeaderView.swift */,
 				65CAE95428DB9ED00088C2F3 /* ClassifiedADCell.swift */,
 				65CAE96028DCA4020088C2F3 /* CategoryCell.swift */,
+				65CAE96228DDFFF40088C2F3 /* UrgentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				65CAE90D28DB462C0088C2F3 /* ClassifiedADSViewController.swift in Sources */,
 				65CAE91628DB48630088C2F3 /* TabBarController.swift in Sources */,
 				65CAE91E28DB790E0088C2F3 /* ImagesUrl.swift in Sources */,
+				65CAE96328DDFFF40088C2F3 /* UrgentView.swift in Sources */,
 				65CAE91A28DB78480088C2F3 /* LBCCategory.swift in Sources */,
 				65CAE8F928DB1FB10088C2F3 /* AppDelegate.swift in Sources */,
 				65CAE92A28DB7BC40088C2F3 /* ClassifiedADSViewModel.swift in Sources */,
