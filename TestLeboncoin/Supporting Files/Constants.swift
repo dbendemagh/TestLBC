@@ -10,6 +10,7 @@ import UIKit
 enum Constants {
     static let fontName = "HelveticaNeue"
     static let boldFontName = "HelveticaNeue-Bold"
+    static let condensedBoldFontName = "HelveticaNeue-CondensedBold"
     static let appTintColor = UIColor.orange
 }
 

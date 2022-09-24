@@ -27,8 +27,10 @@ class ClassifiedADSViewModel {
     }
     
     private func fetchClassifiedADS() {
-        lbcApiService.getClassifiedADS { classifiedADS in
-            self.classifiedADS.value = classifiedADS
+        lbcApiService.getClassifiedADS { [weak self] classifiedADS in
+            if let classifiedADSSorted = self?.sortClassifiedADS(classifiedADS) {
+                self?.classifiedADS.value = classifiedADSSorted
+            }
         }
     }
     
@@ -44,11 +46,32 @@ class ClassifiedADSViewModel {
         }
     }
     
+    func sortClassifiedADS(_ classifiedADS: [ClassifiedAD]) -> [ClassifiedAD] {
+        //print(classifiedADS)
+//                print("Avant")
+//                for item in classifiedADS {
+//                    print("\(item.creationDate) \(item.isUrgent)")
+//                }
+        let dateSorted = classifiedADS.sorted { $0.creationDate > $1.creationDate }   // && ($0.isUrgent && !$1.isUrgent) }
+        let classifiedADSSorted = dateSorted.sorted { $0.isUrgent && !$1.isUrgent }
+        
+        print("Après")
+        for item in classifiedADSSorted {
+            print("\(item.creationDate) \(item.isUrgent)")
+        }
+        
+        return classifiedADSSorted
+    }
+    
     func findCategory(id: Int) -> String {
         if let category = categories.value.first(where: { $0.id == id } ) {
             return category.name
         }
         
         return ""
+    }
+    
+    func getCategory(category: Int) {
+        
     }
 }

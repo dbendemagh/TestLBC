@@ -101,7 +101,7 @@ extension ClassifiedADSViewController {
                 section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
                 section.interGroupSpacing = 10
                 
-                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(45))
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(40))
                 let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
                                                                                 elementKind: UICollectionView.elementKindSectionHeader,
                                                                                 alignment: .topLeading)
@@ -120,7 +120,7 @@ extension ClassifiedADSViewController {
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.identifier, for: indexPath) as? CategoryCell else {
                     return nil
                 }
-                cell.configure(name: category.name)
+                cell.configure(category: category)
                 return cell
             } else if let classifiedAD = itemIdentifier as? ClassifiedAD {
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ClassifiedADCell.identifier, for: indexPath) as? ClassifiedADCell else {

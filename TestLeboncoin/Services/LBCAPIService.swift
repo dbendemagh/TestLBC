@@ -33,8 +33,8 @@ class LBCApiService {
         apiService.getJson(urlString: classifiedUrl, objectType: [ClassifiedAD].self) { result in
             switch result {
             case .success(let classifiedADS):
-                print(classifiedADS)
                 completion(classifiedADS)
+                return
             case .failure(let error):
                 print(error.localizedDescription)
             }
