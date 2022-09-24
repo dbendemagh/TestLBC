@@ -31,6 +31,6 @@ class SectionHeaderView: UICollectionReusableView {
     }
     
     func configure(section: Int) {
-        nameLabel.text = section == 0 ? "Catégorie" : "Annonces"
+        nameLabel.text = section == 0 ? "Catégories" : "Annonces"
     }
 }

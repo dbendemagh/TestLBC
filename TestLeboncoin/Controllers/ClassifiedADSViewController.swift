@@ -54,8 +54,8 @@ class ClassifiedADSViewController: UIViewController {
                 self?.configureSnaphot()
             }.store(in: &subscriptions)
         
-        classifiedADSViewModel.classifiedADS
-            .sink { [weak self] classifiedADS in
+        classifiedADSViewModel.currentClassifiedADS
+            .sink { [weak self] currentClassifiedADS in
                 self?.configureSnaphot()
             }.store(in: &subscriptions)
     }
@@ -156,7 +156,7 @@ extension ClassifiedADSViewController {
         
         currentSnapshot.appendSections([.categories, .classifiedADS])
         currentSnapshot.appendItems(classifiedADSViewModel.categories.value, toSection: .categories)
-        currentSnapshot.appendItems(classifiedADSViewModel.classifiedADS.value, toSection: .classifiedADS)
+        currentSnapshot.appendItems(classifiedADSViewModel.currentClassifiedADS.value, toSection: .classifiedADS)
         
         DispatchQueue.main.async { [weak self] in
             self?.dataSource?.apply(currentSnapshot)
@@ -171,8 +171,9 @@ extension ClassifiedADSViewController: UICollectionViewDelegate {
         
         if indexPath.section == 0 {
             print(classifiedADSViewModel.categories.value[indexPath.row].name)
+            classifiedADSViewModel.category = indexPath.row + 1
         } else if indexPath.section == 1 {
-            print(classifiedADSViewModel.classifiedADS.value[indexPath.row].id)
+            print(classifiedADSViewModel.currentClassifiedADS.value[indexPath.row].id)
         }
     }
 }

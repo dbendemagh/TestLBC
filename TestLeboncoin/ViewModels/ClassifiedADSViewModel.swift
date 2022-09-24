@@ -11,7 +11,15 @@ import UIKit
 
 class ClassifiedADSViewModel {
     var categories = CurrentValueSubject<[LBCCategory], Never>([])
-    var classifiedADS = CurrentValueSubject<[ClassifiedAD], Never>([])
+    var classifiedADS: [ClassifiedAD] = []    // = CurrentValueSubject<[ClassifiedAD], Never>([])
+    var currentClassifiedADS = CurrentValueSubject<[ClassifiedAD], Never>([])
+    var category: Int? {
+        didSet {
+            currentClassifiedADS.value = classifiedADS.filter({ classifiedADS in
+                classifiedADS.categoryId == category
+            })
+        }
+    }
     
     let lbcApiService = LBCApiService()
     
@@ -29,7 +37,8 @@ class ClassifiedADSViewModel {
     private func fetchClassifiedADS() {
         lbcApiService.getClassifiedADS { [weak self] classifiedADS in
             if let classifiedADSSorted = self?.sortClassifiedADS(classifiedADS) {
-                self?.classifiedADS.value = classifiedADSSorted
+                self?.classifiedADS = classifiedADSSorted
+                self?.currentClassifiedADS.value = self?.classifiedADS ?? []
             }
         }
     }
