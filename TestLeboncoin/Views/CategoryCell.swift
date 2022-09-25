@@ -13,6 +13,7 @@ class CategoryCell: UICollectionViewCell {
     let nameLabel = UILabel()
     let imageView = UIImageView()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureLayout()
@@ -23,7 +24,7 @@ class CategoryCell: UICollectionViewCell {
     }
     
     private func configureLayout() {
-        //backgroundColor = .red
+        backgroundColor = .white
         
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true

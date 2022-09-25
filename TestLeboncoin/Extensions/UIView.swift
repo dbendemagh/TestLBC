@@ -44,6 +44,16 @@ extension UIView {
         }
     }
     
+    func setConstraintHeight(heightConstraint: NSLayoutDimension) {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalTo: heightConstraint).isActive = true
+    }
+    
+    func setConstraintHeight(heightConstraint: NSLayoutDimension, multiplier: Float) {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalTo: heightConstraint, multiplier: CGFloat(multiplier)).isActive = true
+    }
+    
     func setConstraintCenter(x: NSLayoutXAxisAnchor?, y: NSLayoutYAxisAnchor?) {
         translatesAutoresizingMaskIntoConstraints = false
         

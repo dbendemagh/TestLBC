@@ -71,13 +71,13 @@ extension ClassifiedADSViewController {
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.6),
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5),
                                                        heightDimension: .fractionalHeight(0.2))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 0)
                 section.interGroupSpacing = 10
                 
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(44))
@@ -91,10 +91,10 @@ extension ClassifiedADSViewController {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth((0.5)),
                                                       heightDimension: .fractionalHeight(1.0))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                       heightDimension: .fractionalHeight(0.6))
+                                                       heightDimension: .fractionalHeight(0.7))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
                 
                 let section = NSCollectionLayoutSection(group: group)
@@ -127,7 +127,7 @@ extension ClassifiedADSViewController {
                     return nil
                 }
                 
-                cell.categoryName = self.classifiedADSViewModel.findCategory(id: classifiedAD.categoryId)
+                cell.categoryName = self.classifiedADSViewModel.categoryName(id: classifiedAD.categoryId)
                 cell.configure(classifiedAD: classifiedAD)
                 
                 if let urlString = classifiedAD.imagesUrl.thumb {
@@ -174,6 +174,13 @@ extension ClassifiedADSViewController: UICollectionViewDelegate {
             classifiedADSViewModel.category = indexPath.row + 1
         } else if indexPath.section == 1 {
             print(classifiedADSViewModel.currentClassifiedADS.value[indexPath.row].id)
+            let classifiedAD = classifiedADSViewModel.currentClassifiedADS.value[indexPath.row]
+            let detailViewModel = DetailViewModel(classifiedAD: classifiedAD)
+            detailViewModel.categoryName = classifiedADSViewModel.categoryName(id: classifiedAD.categoryId)
+            let detailViewController = DetailViewController()
+            detailViewController.detailViewModel = detailViewModel
+            navigationController?.pushViewController(detailViewController, animated: true)
+            
         }
     }
 }

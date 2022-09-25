@@ -11,6 +11,7 @@ class ClassifiedADCell: UICollectionViewCell {
     static let identifier = String(describing: ClassifiedADCell.self)
     
     let titleLabel = UILabel()
+    let defaultImage = DefaultImage()
     let imageView = UIImageView()
     let priceLabel = UILabel()
     let categoryLabel = UILabel()
@@ -28,14 +29,21 @@ class ClassifiedADCell: UICollectionViewCell {
     }
     
     private func configureLayout() {
-        //backgroundColor = .systemGray5 // systemBackground
+        backgroundColor = .white
+        
+        addSubview(defaultImage)
+        defaultImage.setConstraints(top: topAnchor,
+                                     leading: leadingAnchor,
+                                     trailing: trailingAnchor,
+                                     bottom: nil)
+        defaultImage.setConstraintHeight(heightConstraint: heightAnchor, multiplier: 0.75)
         
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
         addSubview(imageView)
         imageView.setConstraints(top: topAnchor, leading: leadingAnchor, trailing: trailingAnchor, bottom: nil)
-        imageView.setConstraintSize(size: CGSize(width: 0, height: 250))
+        imageView.setConstraintHeight(heightConstraint: defaultImage.heightAnchor)
         
         addSubview(urgentView)
         urgentView.setConstraints(top: imageView.topAnchor,
@@ -47,10 +55,10 @@ class ClassifiedADCell: UICollectionViewCell {
         titleLabel.font = UIFont(name: Constants.boldFontName, size: 18)
         titleLabel.numberOfLines = 2
         addSubview(titleLabel)
-        titleLabel.setConstraints(top: imageView.bottomAnchor,
-                             leading: leadingAnchor,
-                             trailing: trailingAnchor,
-                             bottom: nil)
+        titleLabel.setConstraints(top: defaultImage.bottomAnchor,
+                                  leading: leadingAnchor,
+                                  trailing: trailingAnchor,
+                                  bottom: nil)
         
         priceLabel.font = UIFont(name: Constants.boldFontName, size: 15)
         addSubview(priceLabel)
@@ -70,9 +78,9 @@ class ClassifiedADCell: UICollectionViewCell {
     
     func configure(classifiedAD: ClassifiedAD) {
         titleLabel.text = classifiedAD.title
-        priceLabel.text = "\(classifiedAD.price) €"
+        priceLabel.text = classifiedAD.price.floatToEuro()
         categoryLabel.text = categoryName
-        
+        imageView.image = nil
         urgentView.isHidden = !classifiedAD.isUrgent
     }
     
