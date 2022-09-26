@@ -47,7 +47,6 @@ class APIServiceTests: XCTestCase {
             }
             
             XCTAssertEqual(error, LBCError.networkError)
-            print("Erreur : \(error)")
             expectation.fulfill()
         }
         
