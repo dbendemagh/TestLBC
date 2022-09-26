@@ -88,7 +88,7 @@ class DetailViewController: UIViewController {
         
         let button = UIButton()
         button.layer.cornerRadius = 5
-        button.backgroundColor = .orange //.cgColor
+        button.backgroundColor = Constants.appTintColor
         button.setTitle("Acheter", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: Constants.boldFontName, size: 20)

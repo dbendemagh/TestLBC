@@ -27,6 +27,7 @@ class APIService {
                     completion(.success(objects))
                     return
                 case .failure(let error):
+                    print(error)
                     completion(.failure(error))
                     return
                 }
@@ -87,6 +88,7 @@ class APIService {
                 }
 
                 completion(.success(data))
+                return
             }
         })
     }
@@ -97,6 +99,7 @@ class APIService {
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             decoder.dateDecodingStrategy = .iso8601
             let objects = try decoder.decode(T.self, from: data)
+            print("décodage ok")
             return .success(objects)
         }
         catch {

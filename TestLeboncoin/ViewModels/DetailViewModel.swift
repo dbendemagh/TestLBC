@@ -13,13 +13,13 @@ class DetailViewModel {
     
     var imageView = CurrentValueSubject<UIImage?, Never>(nil)
     
-    var classifiedAD: ClassifiedAD? = nil
+    var classifiedAD: LBCClassifiedAD? = nil
     
     var priceString: String { classifiedAD?.price.floatToEuro() ?? "" }
     var dateCreationString: String { classifiedAD?.creationDate.dateToString() ?? "" }
     var categoryName: String = ""
     
-    init(classifiedAD: ClassifiedAD? = nil) {
+    init(classifiedAD: LBCClassifiedAD? = nil) {
         if classifiedAD != nil {
             self.classifiedAD = classifiedAD
             fetchImage()

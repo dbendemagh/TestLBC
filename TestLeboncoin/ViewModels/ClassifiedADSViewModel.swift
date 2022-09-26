@@ -11,8 +11,8 @@ import UIKit
 
 class ClassifiedADSViewModel {
     var categories = CurrentValueSubject<[LBCCategory], Never>([])
-    var classifiedADS: [ClassifiedAD] = []
-    var currentClassifiedADS = CurrentValueSubject<[ClassifiedAD], Never>([])
+    var classifiedADS: [LBCClassifiedAD] = []
+    var currentClassifiedADS = CurrentValueSubject<[LBCClassifiedAD], Never>([])
     var category: Int? {
         didSet {
             currentClassifiedADS.value = classifiedADS.filter({ classifiedADS in
@@ -21,9 +21,10 @@ class ClassifiedADSViewModel {
         }
     }
     
-    let lbcApiService = LBCApiService()
+    var lbcApiService: LBCApiService
     
-    init() {
+    init(lbcApiService: LBCApiService = LBCApiService()) {
+        self.lbcApiService = lbcApiService
         fetchCategories()
         fetchClassifiedADS()
     }
@@ -51,11 +52,10 @@ class ClassifiedADSViewModel {
             case .failure:
                 break
             }
-     
         }
     }
     
-    func sortClassifiedADS(_ classifiedADS: [ClassifiedAD]) -> [ClassifiedAD] {
+    func sortClassifiedADS(_ classifiedADS: [LBCClassifiedAD]) -> [LBCClassifiedAD] {
         let dateSorted = classifiedADS.sorted { $0.creationDate > $1.creationDate }
         let classifiedADSSorted = dateSorted.sorted { $0.isUrgent && !$1.isUrgent }
         

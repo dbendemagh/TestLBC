@@ -10,7 +10,6 @@ import UIKit
 enum Constants {
     static let fontName = "HelveticaNeue"
     static let boldFontName = "HelveticaNeue-Bold"
-    static let condensedBoldFontName = "HelveticaNeue-CondensedBold"
     static let appTintColor = UIColor.orange
 }
 
@@ -26,14 +25,14 @@ enum LBCURL {
 
 enum JsonFile {
     static let categories = "Categories"
-    static let classifiedADs = "Listing"
+    static let classifiedADs = "ClassifiedADS"
 }
 
 enum LBCError: String, Error {
-    case invalidURL = "URL invalide"
+    case invalidURL = "URL invalide."
     case httpError = "Les données n'ont pas pu être chargées. Veuillez réessayer."
     case networkError = "Une erreur est survenue. Veuillez vérifier votre connexion Internet."
-    case noData = "Pas de données. Veuillez réessayer"
+    case noData = "Pas de données. Veuillez réessayer."
     case invalidData = "Les données reçues ne sont pas valides. Veuillez réessayer."
 }
 

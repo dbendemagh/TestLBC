@@ -76,7 +76,7 @@ class ClassifiedADCell: UICollectionViewCell {
         
     }
     
-    func configure(classifiedAD: ClassifiedAD) {
+    func configure(classifiedAD: LBCClassifiedAD) {
         titleLabel.text = classifiedAD.title
         priceLabel.text = classifiedAD.price.floatToEuro()
         categoryLabel.text = categoryName

@@ -13,7 +13,6 @@ class CategoryCell: UICollectionViewCell {
     let nameLabel = UILabel()
     let imageView = UIImageView()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureLayout()

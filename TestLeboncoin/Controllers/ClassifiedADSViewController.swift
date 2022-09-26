@@ -122,7 +122,7 @@ extension ClassifiedADSViewController {
                 }
                 cell.configure(category: category)
                 return cell
-            } else if let classifiedAD = itemIdentifier as? ClassifiedAD {
+            } else if let classifiedAD = itemIdentifier as? LBCClassifiedAD {
                 guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ClassifiedADCell.identifier, for: indexPath) as? ClassifiedADCell else {
                     return nil
                 }
@@ -140,7 +140,6 @@ extension ClassifiedADSViewController {
         })
         
         dataSource?.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
-            
             guard let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader,
                                                                                    withReuseIdentifier: SectionHeaderView.identifier,
                                                                                           for: indexPath) as? SectionHeaderView else { return nil }
@@ -168,19 +167,16 @@ extension ClassifiedADSViewController {
 
 extension ClassifiedADSViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         if indexPath.section == 0 {
             print(classifiedADSViewModel.categories.value[indexPath.row].name)
             classifiedADSViewModel.category = indexPath.row + 1
         } else if indexPath.section == 1 {
-            print(classifiedADSViewModel.currentClassifiedADS.value[indexPath.row].id)
             let classifiedAD = classifiedADSViewModel.currentClassifiedADS.value[indexPath.row]
             let detailViewModel = DetailViewModel(classifiedAD: classifiedAD)
             detailViewModel.categoryName = classifiedADSViewModel.categoryName(id: classifiedAD.categoryId)
             let detailViewController = DetailViewController()
             detailViewController.detailViewModel = detailViewModel
             navigationController?.pushViewController(detailViewController, animated: true)
-            
         }
     }
 }

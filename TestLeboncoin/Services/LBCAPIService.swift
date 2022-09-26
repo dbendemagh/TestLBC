@@ -15,22 +15,22 @@ class LBCApiService {
     }
     
     let categoriesUrl: String = { LBCURL.basePath + LBCURL.categories }()
-    let classifiedUrl: String = { LBCURL.basePath + LBCURL.classifiedADS }()
+    let classifiedADSUrl: String = { LBCURL.basePath + LBCURL.classifiedADS }()
     
     func getCategories(completion: @escaping ([LBCCategory]) -> Void) {
         apiService.getJson(urlString: categoriesUrl, objectType: [LBCCategory].self) { result in
             switch result {
             case .success(let categories):
-                print(categories)
                 completion(categories)
+                return
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
     }
     
-    func getClassifiedADS(completion: @escaping ([ClassifiedAD]) -> Void) {
-        apiService.getJson(urlString: classifiedUrl, objectType: [ClassifiedAD].self) { result in
+    func getClassifiedADS(completion: @escaping ([LBCClassifiedAD]) -> Void) {
+        apiService.getJson(urlString: classifiedADSUrl, objectType: [LBCClassifiedAD].self) { result in
             switch result {
             case .success(let classifiedADS):
                 completion(classifiedADS)

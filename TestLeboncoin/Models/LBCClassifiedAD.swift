@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ClassifiedAD: Decodable {
+struct LBCClassifiedAD: Decodable {
     let id: Int
     let title: String
     let categoryId: Int
@@ -18,12 +18,12 @@ struct ClassifiedAD: Decodable {
     let price: Float
 }
 
-extension ClassifiedAD: Hashable, Identifiable {
+extension LBCClassifiedAD: Hashable, Identifiable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
     
-    static func == (lhs: ClassifiedAD, rhs: ClassifiedAD) -> Bool {
+    static func == (lhs: LBCClassifiedAD, rhs: LBCClassifiedAD) -> Bool {
         lhs.id == rhs.id
     }
 }

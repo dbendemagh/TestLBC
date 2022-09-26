@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65BB4B4028E1F07D00822C38 /* LBCApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB4B3F28E1F07D00822C38 /* LBCApiServiceTests.swift */; };
+		65BB4B4228E1FAD100822C38 /* Guitare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65BB4B4128E1FAD100822C38 /* Guitare.jpg */; };
 		65CAE8F928DB1FB10088C2F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE8F828DB1FB10088C2F3 /* AppDelegate.swift */; };
 		65CAE8FB28DB1FB10088C2F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE8FA28DB1FB10088C2F3 /* SceneDelegate.swift */; };
 		65CAE90228DB1FB30088C2F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65CAE90128DB1FB30088C2F3 /* Assets.xcassets */; };
@@ -22,7 +24,6 @@
 		65CAE92628DB79E50088C2F3 /* LBCAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92528DB79E50088C2F3 /* LBCAPIService.swift */; };
 		65CAE92828DB7AC00088C2F3 /* LBCURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92728DB7AC00088C2F3 /* LBCURLSession.swift */; };
 		65CAE92A28DB7BC40088C2F3 /* ClassifiedADSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE92928DB7BC40088C2F3 /* ClassifiedADSViewModel.swift */; };
-		65CAE93F28DB81750088C2F3 /* TestLeboncoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE93E28DB81750088C2F3 /* TestLeboncoinTests.swift */; };
 		65CAE94728DB823C0088C2F3 /* FakeNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE94628DB823C0088C2F3 /* FakeNetworkResponse.swift */; };
 		65CAE94928DB825E0088C2F3 /* FakeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE94828DB825E0088C2F3 /* FakeData.swift */; };
 		65CAE94B28DB829B0088C2F3 /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CAE94A28DB829B0088C2F3 /* URLSessionFake.swift */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65BB4B3F28E1F07D00822C38 /* LBCApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCApiServiceTests.swift; sourceTree = "<group>"; };
+		65BB4B4128E1FAD100822C38 /* Guitare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guitare.jpg; sourceTree = "<group>"; };
 		65CAE8F528DB1FB10088C2F3 /* TestLeboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLeboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65CAE8F828DB1FB10088C2F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65CAE8FA28DB1FB10088C2F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +74,6 @@
 		65CAE92728DB7AC00088C2F3 /* LBCURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBCURLSession.swift; sourceTree = "<group>"; };
 		65CAE92928DB7BC40088C2F3 /* ClassifiedADSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedADSViewModel.swift; sourceTree = "<group>"; };
 		65CAE93C28DB81750088C2F3 /* TestLeboncoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestLeboncoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		65CAE93E28DB81750088C2F3 /* TestLeboncoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLeboncoinTests.swift; sourceTree = "<group>"; };
 		65CAE94628DB823C0088C2F3 /* FakeNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkResponse.swift; sourceTree = "<group>"; };
 		65CAE94828DB825E0088C2F3 /* FakeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeData.swift; sourceTree = "<group>"; };
 		65CAE94A28DB829B0088C2F3 /* URLSessionFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
@@ -221,8 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				65CAE94528DB82130088C2F3 /* Helpers */,
-				65CAE93E28DB81750088C2F3 /* TestLeboncoinTests.swift */,
 				65CAE95028DB838B0088C2F3 /* APIServiceTests.swift */,
+				65BB4B3F28E1F07D00822C38 /* LBCApiServiceTests.swift */,
 			);
 			path = TestLeboncoinTests;
 			sourceTree = "<group>";
@@ -235,6 +237,7 @@
 				65CAE94A28DB829B0088C2F3 /* URLSessionFake.swift */,
 				65CAE94C28DB82F40088C2F3 /* ClassifiedADS.json */,
 				65CAE94E28DB83250088C2F3 /* Categories.json */,
+				65BB4B4128E1FAD100822C38 /* Guitare.jpg */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65CAE94D28DB82F40088C2F3 /* ClassifiedADS.json in Resources */,
+				65BB4B4228E1FAD100822C38 /* Guitare.jpg in Resources */,
 				65CAE94F28DB83250088C2F3 /* Categories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +379,7 @@
 				65CAE94928DB825E0088C2F3 /* FakeData.swift in Sources */,
 				65CAE94B28DB829B0088C2F3 /* URLSessionFake.swift in Sources */,
 				65CAE94728DB823C0088C2F3 /* FakeNetworkResponse.swift in Sources */,
-				65CAE93F28DB81750088C2F3 /* TestLeboncoinTests.swift in Sources */,
+				65BB4B4028E1F07D00822C38 /* LBCApiServiceTests.swift in Sources */,
 				65CAE95128DB838B0088C2F3 /* APIServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
