@@ -30,7 +30,6 @@ class LBCApiServiceTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Get categories")
         
         lbcApiService.getCategories { categories in
-            print(categories)
             XCTAssertEqual(categories.count, 11)
             XCTAssertEqual(categories[0].id, 1)
             XCTAssertEqual(categories[0].name, "Véhicule")

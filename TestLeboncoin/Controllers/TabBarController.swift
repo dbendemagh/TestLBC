@@ -24,7 +24,7 @@ class TabBarController: UITabBarController {
         mainVC.tabBarItem = UITabBarItem(title: "Rechercher", image: SFSymbols.magnifyingGlass, tag: 0)
         let mainNC = UINavigationController(rootViewController: mainVC)
         
-        if let font = UIFont(name: Constants.boldFontName, size: 30) {
+        if let font = UIFont(name: Constants.boldFontName, size: 28) {
             let attributes = [NSAttributedString.Key.font:font,
                               NSAttributedString.Key.foregroundColor:Constants.appTintColor]
             mainNC.navigationBar.titleTextAttributes = attributes

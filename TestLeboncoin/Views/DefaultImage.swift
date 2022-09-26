@@ -23,11 +23,10 @@ class DefaultImage: UIView {
         layer.cornerRadius = 10
         
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "questionmark.app")
+        imageView.image = SFSymbols.questionMark
         imageView.tintColor = .white
         addSubview(imageView)
         imageView.setConstraintSize(size: CGSize(width: 100, height: 100))
         imageView.setConstraintCenter(x: centerXAnchor, y: centerYAnchor)
-        
     }
 }

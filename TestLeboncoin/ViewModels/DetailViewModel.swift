@@ -9,8 +9,6 @@ import UIKit
 import Combine
 
 class DetailViewModel {
-    let lbcApiService = LBCApiService()
-    
     var imageView = CurrentValueSubject<UIImage?, Never>(nil)
     
     var classifiedAD: LBCClassifiedAD? = nil
@@ -18,6 +16,8 @@ class DetailViewModel {
     var priceString: String { classifiedAD?.price.floatToEuro() ?? "" }
     var dateCreationString: String { classifiedAD?.creationDate.dateToString() ?? "" }
     var categoryName: String = ""
+    
+    let lbcApiService = LBCApiService()
     
     init(classifiedAD: LBCClassifiedAD? = nil) {
         if classifiedAD != nil {

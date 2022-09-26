@@ -33,5 +33,4 @@ class UrgentView: UIView {
         
         setConstraintSize(size: CGSize(width: 80, height: 20))
     }
-
 }

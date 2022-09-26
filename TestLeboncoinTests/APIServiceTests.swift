@@ -18,7 +18,6 @@ class APIServiceTests: XCTestCase {
                                             response: FakeNetworkResponse.httpOK,
                                             error: nil)
         let apiService = APIService(urlSession: urlSessionFake)
-        
         let expectation = XCTestExpectation(description: "Fetch categories")
         
         apiService.getJson(urlString: urlString, objectType: [LBCCategory].self) { result in
@@ -39,7 +38,6 @@ class APIServiceTests: XCTestCase {
                                             response: FakeNetworkResponse.httpError,
                                             error: LBCError.networkError)
         let apiService = APIService(urlSession: urlSessionFake)
-        
         let expectation = XCTestExpectation(description: "Fetch categories")
         
         apiService.getJson(urlString: urlString, objectType: [LBCCategory].self) { result in
@@ -56,7 +54,7 @@ class APIServiceTests: XCTestCase {
         wait(for: [expectation], timeout: 1)
     }
     
-    func testFGetJson_Failure_HttpError() {
+    func testGetJson_Failure_HttpError() {
         let urlSessionFake = URLSessionFake(lbcData: nil,
                                             response: FakeNetworkResponse.httpError,
                                             error: nil)
@@ -125,7 +123,6 @@ class APIServiceTests: XCTestCase {
                                             response: FakeNetworkResponse.httpOK,
                                             error: nil)
         let apiService = APIService(urlSession: urlSessionFake)
-        
         let expectation = XCTestExpectation(description: "Get image")
         
         apiService.getImage(urlString: imageUrlString) { result in

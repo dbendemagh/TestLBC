@@ -15,6 +15,7 @@ enum Constants {
 
 enum SFSymbols {
     static let magnifyingGlass = UIImage(systemName: "magnifyingglass")
+    static let questionMark = UIImage(systemName: "questionmark.app")
 }
 
 enum LBCURL {
